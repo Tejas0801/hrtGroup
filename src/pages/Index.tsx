@@ -44,10 +44,10 @@ const Index = () => {
         >
           <div className="max-w-4xl mx-auto">
             <p className="text-primary-foreground/90 text-sm md:text-base mb-4 font-medium">
-              Family-owned since 1950 — operating across Andhra Pradesh, Telangana & Tamil Nadu
+              Since 1950 — operating across Andhra Pradesh, Telangana & Tamil Nadu
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
-              HRT Group — Family-led business, built to deliver.
+              HRT Group —  built to deliver.
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
               Three verticals — Textiles, Pharmaceuticals, and Real Estate — delivering quality and trust across South India since 1950.

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from "/Users/tejas/Desktop/Projects/hrt-loveable-hub/src/assets/hrtLogo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +24,6 @@ const Header = () => {
     { name: 'Businesses', path: '/businesses' },
     { name: 'Projects', path: '/projects' },
     { name: 'Team', path: '/team' },
-    { name: 'Press', path: '/press' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -40,8 +40,11 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-primary">HRT Group</span>
-              <span className="text-xs text-muted-foreground">Since 1950</span>
+              <span className="flex items-center text-2xl font-bold text-primary">
+      <img src={logo} alt="HRT Group Logo" className="w-20 h-20 mr-2 mt-3" />
+    
+    </span>
+              {/* <span className="text-xs text-muted-foreground ml-3">Since 1950</span> */}
             </div>
           </Link>
 
