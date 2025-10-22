@@ -27,14 +27,16 @@ const Header = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const isHome =
-    location.pathname === '/' ||
-    location.pathname === '/hrtGroup/' ||
-    location.pathname === '/hrtGroup';
+// detect homepage (Router provides pathname relative to basename)
+const isHome = location.pathname === "/";
 
-  const defaultLinkClass = isScrolled || !isHome ? 'text-foreground' : 'text-white';
-  const brandClass = isScrolled || !isHome ? 'text-primary' : 'text-white';
-  const currentLogo = isScrolled || !isHome ? logoBlack : logoWhite;
+// only show white when on homepage AND at the top (not scrolled)
+const showWhite = isHome && !isScrolled;
+
+const defaultLinkClass = showWhite ? "text-white" : "text-foreground";
+const brandClass = showWhite ? "text-white" : "text-primary";
+const currentLogo = showWhite ? logoWhite : logoBlack;
+
 
   return (
     <header
