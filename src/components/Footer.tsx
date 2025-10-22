@@ -12,25 +12,26 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        {/* Use 3 columns on large screens since newsletter was removed */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div>
+          <div className="max-w-md">
             <h3 className="text-xl font-bold mb-4">HRT Group</h3>
             <p className="text-sm opacity-90 mb-4">
               Family-owned since 1950, delivering quality and trust across South India through
               Textiles, Pharmaceuticals, and Real Estate.
             </p>
-            <div className="flex space-x-3">
-              <a href="#" className="hover:text-accent transition-colors">
+            <div className="flex items-center space-x-3">
+              <a href="#" className="hover:text-accent transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="#" className="hover:text-accent transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="#" className="hover:text-accent transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="#" className="hover:text-accent transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
@@ -89,29 +90,6 @@ const Footer = () => {
               <p className="text-sm font-medium mb-1">Office Hours:</p>
               <p className="text-sm opacity-90">Mon-Sat: 9:00 AM - 6:00 PM</p>
             </div>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
-            <p className="text-sm opacity-90 mb-4">
-              Stay updated with our latest news and offers.
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                required
-              />
-              <Button
-                type="submit"
-                variant="secondary"
-                className="w-full"
-              >
-                Subscribe
-              </Button>
-            </form>
           </div>
         </div>
 
